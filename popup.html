@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Ma Extension</title>
-    <script src="popup.js"></script>
-  </head>
-  <body>
-    <h1>Ma Extension</h1>
-    <button id="startButton">Démarrer l'enregistrement</button>
-    <button id="stopButton">Arrêter l'enregistrement</button>
-  </body>
+<head>
+  <title>Popup</title>
+  <script src="popup.js"></script>
+  <style>
+    .play-button {
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 15px solid green;
+      cursor: pointer;
+    }
+    
+    .stop-button {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      cursor: pointer;
+    }
+
+    .pointer-button {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      display: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 6v6M12 18h.01'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 16px;
+    }
+  </style>
+</head>
+<body>
+    <h1>Test Maker Recorder</h1>
+  <button id="startButton" class="play-button"></button>
+  <button id="stopButton" class="stop-button" style="display: none;"></button>
+  <button id="pointerButton" class="pointer-button" style="display: none;"></button>
+
+  <script src="popup.js"></script>
+</body>
 </html>
